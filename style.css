@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web:400,300,200,600");
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:700);
+body {
+  background-image: url("backgroud.jpg");
+  background-position: center top;
+  background-color: #5b0a0a;
+  -webkit-font-smoothing: antialiased;
+  background-size: cover;
+}
+
+.flip-container {
+  perspective: 1000;
+  margin-top: 40px;
+}
+
+.flip-container:hover .card, .flip-container.hover .card {
+  transform: rotateY(180deg);
+}
+
+.flip-container, .front, .back {
+  width: 320px;
+  height: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  position: relative;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+}
+
+.front {
+  width: 320px;
+  height: 472px;
+  padding: 120px 0 0 0;
+  text-align:center;
+  background-color: #DE4242;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  color: #ffffff;
+  font-family: 'Titillium Web', sans-serif;
+  border-radius: 10px;
+}
+
+.front .girl-img{
+  width:160px;
+}
+
+.front h3{
+  margin:10px 0;
+  font-size: 25px;
+}
+
+.back {
+  width: 320px;
+  height: 472px;
+  background-color: #ffffff;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  padding: 20px 20px 10px 20px;
+  color: #05122d;
+  font-family: 'Titillium Web', sans-serif;
+  border-radius: 10px;
+}
+
+.card-content {
+  position: absolute;
+  width: 230px;
+  text-align: center;
+  padding: 100px 0 0 0;
+  left: 45px;
+  right: 45px;
+}
+
+.card-content h3{
+  font-size: 25px;
+  font-weight: bold;
+  border-bottom:5px solid #DE4242;
+}
+
+.card-content ul{
+  margin:0;
+  padding:0 10px;
+  list-style:none;
+  text-align:left;
+}
+.card-content i {
+  width:18px;
+  height:18px;
+  text-align: center;
+  padding: 0 5px 0 0;
+}
+.card-content a{
+  text-decoration: none;
+  color: #10649b;
+}
+
+.front, .back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.front {
+  z-index: 2;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
